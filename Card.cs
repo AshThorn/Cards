@@ -27,7 +27,7 @@ namespace Cards
         }
 
         /// <summary>
-        /// parameterized constructor
+        /// normal parameterized constructor
         /// </summary>
         /// <param name="face">the face</param>
         /// <param name="suit">the suit</param>
@@ -45,6 +45,16 @@ namespace Cards
         {
             this.suit = card.suit;
             this.face = card.face;
+        }
+
+        /// <summary>
+        /// weird paramaterized constructor
+        /// </summary>
+        /// <param name="i">integer from which a card is derived</param>
+        public Card(int i)
+        {
+            face = (Face)Enum.GetValues(typeof(Face)).GetValue(i % 13);
+            suit = (Suit)Enum.GetValues(typeof(Face)).GetValue(i % 4);
         }
 
         /// <summary>

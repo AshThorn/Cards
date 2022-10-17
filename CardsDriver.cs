@@ -15,26 +15,29 @@ namespace Cards
     /// </summary>
     public class CardsDriver
     {
+        private static Deck deck, deckCopy;
+        private static Hand hand1, hand2;
+
         /// <summary>
         /// main method
         /// </summary>
         /// <param name="args">supplies params from the console when running the program</param>
-        public static void Main(string[] args)
+        /*public static void Main(string[] args)
         {
-            Deck deck = new Deck();
+            deck = new Deck();
             System.Console.WriteLine(deck + "\n");
             deck.Shuffle();
             System.Console.WriteLine(deck);
 
-            Deck deckCopy = new Deck(deck);
+            deckCopy = new Deck(deck);
             
-            Hand hand1 = new Hand(7);
+            hand1 = new Hand(7);
             for(int i = 0; i < hand1.GetHandSize(); i++)
             {
                 hand1.AddACard(deckCopy.DealACard());
             }
             
-            Hand hand2 = new Hand(7);
+            hand2 = new Hand(7);
             for (int i = 0; i < hand2.GetHandSize(); i++)
             {
                 hand2.AddACard(deckCopy.DealACard());
@@ -42,6 +45,6 @@ namespace Cards
 
             System.Console.WriteLine("\n" + hand1);
             System.Console.WriteLine("\n" + hand2);
-        }
+        }*/
     }
 }
